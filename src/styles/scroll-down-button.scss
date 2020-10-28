@@ -1,0 +1,77 @@
+@import './globalStyles.scss';
+
+.scroll-down-button {
+    display: flex;
+    align-items: center;
+
+    .children {
+        color: $color-blue;
+    }
+
+    .arrow-box {
+        margin: 0 5px;
+        width: 26px;
+        height: 26px;
+        background: transparent;
+        border: 1px solid $color-blue;
+        border-radius: 5px;
+        position: relative;
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 12px;
+            background: $color-blue;
+            border-radius: 10px;
+
+            &::before,
+            &::after {
+                content: '';
+                border-radius: 10px;
+                position: absolute;
+                background: $color-blue;
+                height: 2px;
+                width: 8px;
+                bottom: 0;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+                right: -1px;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                left: -1px;
+            }
+        }
+    }
+
+    //hover animation
+    opacity: .8;
+    will-change: opacity, transform;
+    transition: opacity .2s ease-in-out, transform .25s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+    }
+
+    .arrow {
+        will-change: transform;
+    }
+
+    &:hover .arrow {
+        animation: arrow-anim .5s infinite alternate ease-in;
+    }
+
+    @keyframes arrow-anim {
+        to {
+            transform: translate(-50%, -40%);
+        }
+    }
+    
+}

@@ -1,0 +1,303 @@
+@import '../styles/globalStyles.scss';
+
+.footer {
+    background: $color-blue;
+    padding: 100px 0;
+    color: $color-white;
+
+    a {
+        color: $color-white;
+        width: fit-content;
+    }
+
+    .address .icon {
+        height: 25px;
+        width: 25px;
+    }
+
+    .logo {
+        text-align: center;
+
+        path {
+            fill: $color-white;
+        }
+    }
+
+    .wrapper {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .info {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+
+            p {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding: 120px 0;
+    }
+}
+
+.navigation {
+    position: relative;
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 100;
+
+        .logo {
+            color: $color-blue;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        &::before {
+            content: '';
+            background: $color-white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-bottom: 1px solid rgba($color: $color-black, $alpha: .05);
+            z-index: -1;
+        }
+    }
+
+    .navbar-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            height: 26px;
+        }
+    }
+
+    .hamburger-menu {
+        cursor: pointer;
+        background: transparent;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        border: 1px solid $color-blue;
+        border-radius: 3.6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__item {
+            height: 2px;
+            width: 20px;
+            background: $color-blue;
+            will-change: transform;
+            transition: transform .3s ease-in-out;
+        }
+
+        .top-line {
+            transform: translateY(-3px);
+        }
+
+        .bottom-line {
+            transform: translateY(3px);
+        }
+
+        &--open {
+            .top-line {
+                transform: translateY(1px) rotate(-45deg);
+            }
+            .bottom-line {
+                transform: translateY(-1px) rotate(45deg);
+            }
+        }
+    }
+
+    @media (hover: hover) {
+        .hamburger-menu:hover {
+            .top-line {
+                transform: translateY(1px);
+            }
+
+            .bottom-line {
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .hamburger-menu::before {
+            content: 'MENU';
+            color: $color-blue;
+            font-size: 18px;
+            letter-spacing: .2em;
+            position: absolute;
+            top: 50%;
+            left: -5px;
+            transform: translate(-100%, -50%);
+        }
+    }
+}
+
+.menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: $color-light;
+    top: 0;
+    right: 0;
+    display: flex;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: transform .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        width: 400px;
+    }
+
+    &-back-layer {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: rgba($color: $color-blue, $alpha: .8);
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        will-change: transform;
+        transition: transform .6s .1s ease-in-out;
+        z-index: 98;
+
+        @media (min-width: 768px) {
+            width: 402px;
+        }
+    }
+
+
+    &--open {
+        .menu {
+            transform: translateX(0);
+            transition: transform .5s .1s ease-in-out;
+
+            .nav-links {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            &-social-media {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .menu-back-layer {
+            transform: translateX(0);
+            transition: transform .4s ease-in-out;
+        }
+    }
+
+}
+
+.nav-links {
+    font-size: 32px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-10px);
+    will-change: opacity, transform;
+    transition: opacity .5s ease-in-out, transform .8s  ease-in-out;
+
+    .link {
+        margin: 25px 0;
+        color: rgba($color: $color-blue, $alpha: .8);
+        opacity: .5;
+        position: relative;
+        will-change: opacity, transform;
+        transition: opacity .2s ease-in-out, transform .25s ease-in-out;
+
+        &--active {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+    }
+}
+
+.menu-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+    will-change: opacity, transform;
+    transition: opacity .5s .3s ease-in-out, transform .2s .25s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+
+    a {
+        display: flex;
+        align-items: center;
+        color: rgba($color: $color-dark, $alpha: .8);
+        opacity: .6;
+        will-change: opacity;
+        transition: opacity .2s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .icon {
+        margin: 0 10px;
+
+        &--facebook path {
+            fill: $color-blue;
+        }
+        &--instagram path {
+            fill: $color-yellow;
+        }
+    }
+
+    .vertical-line {
+        width: 2px;
+        height: 20px;
+        background: rgba($color: $color-dark, $alpha: .6);
+        margin: 0 15px;
+    }
+}
+
+
+
+

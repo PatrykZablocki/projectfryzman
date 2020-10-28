@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+// colors //
+$color-yellow: #EEC338;
+$color-blue: #007BBB;
+$color-light: #F7F7F8;
+$color-dark: #3A4454;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: $color-white;
+    color: rgba($color: $color-black, $alpha: 0.8);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+
+    @media (min-width: 768px) {
+        font-size: 50px;
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 21px;
+
+    @media (min-width: 768px) {
+        font-size: 36px;
+    }
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 18px;
+
+    @media (min-width: 768px) {
+        font-size: 21px;
+    }
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba($color: $color-black, $alpha: 0.5);
+}
+
+.link {
+    text-decoration: none;
+}
+
+*::selection {
+    color: $color-white;
+    background: $color-yellow;
+}
+
+.yellow-font {color: $color-yellow;}
+.blue-font {color: $color-blue;}
+.black-font {color: rgba($color: $color-black, $alpha: 0.8);}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+
+    @media (min-width: 768px) {
+        padding: 0 25px;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1050px;
+    }
+}

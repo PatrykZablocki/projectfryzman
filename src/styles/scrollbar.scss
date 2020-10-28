@@ -1,0 +1,19 @@
+@import '../styles/globalStyles.scss';
+
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-light;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba($color: $color-dark, $alpha: .5);
+  border-radius: 25px;
+  border: 3px solid $color-light;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($color: $color-dark, $alpha: .6);
+}

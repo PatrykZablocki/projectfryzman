@@ -1,0 +1,95 @@
+@import './globalStyles.scss';
+
+.services-main-section {
+    width: 100%;
+    min-height: 100vh;
+    color: $color-light;
+    text-align: center;
+    position: relative;
+    background: url('../images/services-subpage-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        background: rgba($color: $color-blue, $alpha: .8);
+        width: 100%;
+        min-height: inherit;
+        padding: 80px 0;
+    }
+
+    h2 {
+        color: $color-white;
+        margin-bottom: 50px;
+    }
+
+    .price-list {
+        p {
+            margin: 20px 0;
+        }
+
+        .price {
+            margin-left: 10px;
+        }
+    }
+
+    .special-offer {
+        margin-top: 100px;
+        max-width: 400px;
+
+        .title {
+            font-weight: 700;
+            color: $color-white;
+            margin-bottom: 10px;
+        }
+    }
+
+    .yellow-bold {
+        font-weight: 700;
+        color: $color-yellow;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+
+        .price-list {
+            text-align: end;
+            margin-right: 50px;
+
+            p:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .special-offer {
+            margin-left: 50px;
+            margin-top: 0;
+            text-align: start;
+            max-width: 220px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .wrapper {
+            min-height: unset;
+            position: sticky;
+            top: -100px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        background-attachment: fixed;
+        .special-offer {
+            max-width: 400px;
+        }
+    }
+}

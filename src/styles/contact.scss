@@ -1,0 +1,77 @@
+@import './globalStyles.scss';
+
+.contact-main-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background:
+        linear-gradient(90deg, #FFFFFF 45%, rgba(255, 255, 255, .8) 100%),
+        url('../images/contact-subpage-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70% center;
+    padding: 75px 0;
+
+    .box {
+        margin: 50px 0;
+
+        @media (min-width: 768px) {
+            margin: 100px 0;
+        }
+
+        &__title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        &__item {
+            color: $color-blue;
+            margin: 10px 0 10px 5px;
+            font-weight: 300;
+        }
+
+        &--social-media .box__item {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+
+            .icon {
+                height: 21px;
+                width: 21px;
+                margin-right: 5px;
+
+                &--facebook path {
+                    fill: $color-blue;
+                }
+
+                &--instagram path {
+                    fill: $color-yellow;
+                }
+            }
+
+            &--instagram {
+                color: $color-yellow;
+            }
+
+            //hover animation
+            opacity: .8;
+            will-change: opacity;
+            transition: opacity .2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            p {
+                will-change: transform;
+                transition: transform .3s ease-in-out;
+            }
+
+            &:hover p {
+                transform: translateX(-1px);
+            }
+
+        }
+    }
+
+}

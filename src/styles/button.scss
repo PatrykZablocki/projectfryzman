@@ -1,0 +1,44 @@
+@import './globalStyles.scss';
+
+.btn {
+    color: $color-white;
+    color: $color-white;
+    width: fit-content;
+    height: fit-content;
+    padding: 6px 10px;
+    cursor: pointer;
+
+    &--primary {
+        background: $color-blue;
+    }
+
+    &--secondary {
+        background: $color-yellow;
+    }
+
+    //hover animation
+    position: relative;
+    z-index: 0;
+    overflow-x: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translateX(-101%);
+        will-change: transform;
+        transition: transform .3s ease-in-out;
+
+    }
+
+    &--primary::before {background: $color-yellow;}
+    &--secondary::before {background: $color-blue;}
+
+    &:hover::before {
+        transform: translateX(0)
+    }
+}
