@@ -1,0 +1,31 @@
+@import './globalStyles.scss';
+
+.not-found-page-section {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    background: $color-dark;
+
+    @media (min-width: 768px) {
+        min-height: 100vh;
+    }
+
+    .container {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 25vw;
+        color: $color-blue;
+        font-weight: 700;
+        mask-image:  linear-gradient(to bottom, black, transparent);
+    }
+
+    h3 {
+        color: $color-light;
+        margin-bottom: 25px;
+    }
+}

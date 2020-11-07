@@ -187,12 +187,10 @@
 
             //hover animation
             &::before {
-                will-change: transform;
                 transition: transform .5s ease-in-out;
             }
 
             &__description {
-                will-change: opacity;
                 transition: opacity .3s ease-in-out;
             }
 
@@ -377,17 +375,7 @@
 
         //hover animation
         .link {
-            //opacity: .8;
-            //will-change: opacity;
-            //transition: opacity .2s ease-in-out;
-
-            //&:hover {
-             //   opacity: 1;
-            //}
-
-
             span, .icon {
-                will-change: transform;
                 transition: transform .3s ease-in-out;
             }
 

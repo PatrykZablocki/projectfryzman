@@ -1,4 +1,5 @@
 import React from "react"
+import {Helmet} from "react-helmet"
 
 import '../../styles/layout.scss'
 
@@ -11,6 +12,11 @@ import Menu from '../Layout/Menu'
 
 const Layout = ( { children }) =>(
   <>
+  <Helmet>
+    <title>Fryzman - salon fryzjerski</title>
+    <meta name='author' content='Patryk Zabłocki'/>
+  </Helmet>
+
   <Navbar />
   <Menu />
   {children}

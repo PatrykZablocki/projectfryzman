@@ -60,10 +60,6 @@
         transform: translateY(-1px);
     }
 
-    .arrow {
-        will-change: transform;
-    }
-
     &:hover .arrow {
         animation: arrow-anim .5s infinite alternate ease-in;
     }
@@ -73,5 +69,5 @@
             transform: translate(-50%, -40%);
         }
     }
-    
+
 }

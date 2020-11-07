@@ -55,7 +55,6 @@
 
             //hover animation
             opacity: .8;
-            will-change: opacity;
             transition: opacity .2s ease-in-out;
 
             &:hover {
@@ -63,7 +62,6 @@
             }
 
             p {
-                will-change: transform;
                 transition: transform .3s ease-in-out;
             }
 

@@ -110,7 +110,6 @@
             height: 2px;
             width: 20px;
             background: $color-blue;
-            will-change: transform;
             transition: transform .3s ease-in-out;
         }
 
@@ -167,7 +166,6 @@
     right: 0;
     display: flex;
     transform: translateX(100%);
-    will-change: transform;
     transition: transform .5s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -186,7 +184,6 @@
         top: 0;
         right: 0;
         transform: translateX(100%);
-        will-change: transform;
         transition: transform .6s .1s ease-in-out;
         z-index: 98;
 
@@ -232,7 +229,6 @@
     font-weight: 700;
     opacity: 0;
     transform: translateY(-10px);
-    will-change: opacity, transform;
     transition: opacity .5s ease-in-out, transform .8s  ease-in-out;
 
     .link {
@@ -240,7 +236,6 @@
         color: rgba($color: $color-blue, $alpha: .8);
         opacity: .5;
         position: relative;
-        will-change: opacity, transform;
         transition: opacity .2s ease-in-out, transform .25s ease-in-out;
 
         &--active {
@@ -261,7 +256,6 @@
     justify-content: center;
     width: 100%;
     margin-bottom: 25px;
-    will-change: opacity, transform;
     transition: opacity .5s .3s ease-in-out, transform .2s .25s ease-in-out;
     opacity: 0;
     transform: translateY(50px);
@@ -271,7 +265,6 @@
         align-items: center;
         color: rgba($color: $color-dark, $alpha: .8);
         opacity: .6;
-        will-change: opacity;
         transition: opacity .2s ease-in-out;
 
         &:hover {
