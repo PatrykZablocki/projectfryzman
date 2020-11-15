@@ -43,6 +43,7 @@
         }
     }
 }
+
 .services-section {
     position: relative;
     width: 100%;
@@ -142,9 +143,9 @@
 
     @media (min-width: 1024px) {
         padding: 100px 0;
-        min-height: 100vh;
         z-index: 0;
         display: flex;
+        min-height: 100vh;
 
         &::before {
             content: '';
@@ -206,6 +207,13 @@
         }
     }
 
+    @media (min-width: 2048px) and (min-height: 1080px) {
+        min-height: 1080px;
+
+        &::before {
+            width: 45%;
+        }
+    }
 }
 
 .info-section {
