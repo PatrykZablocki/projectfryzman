@@ -15,6 +15,7 @@ const Layout = ( { children }) =>(
   <Helmet>
     <title>Fryzman - salon fryzjerski</title>
     <meta name='author' content='Patryk Zabłocki'/>
+    <link rel="icon" href="/favicon.png" type="image/png" />
   </Helmet>
 
   <Navbar />
