@@ -1,23 +1,18 @@
 import React from "react"
-import {Helmet} from "react-helmet"
 
 import '../../styles/layout.scss'
 
 import '../../styles/scrollbar.scss'
 import '../../scripts/smoothScroll'
 
+import Helmet from '../Helmet/Helmet'
 import Navbar from './Navbar'
 import Footer from '../Layout/Footer'
 import Menu from '../Layout/Menu'
 
 const Layout = ( { children }) =>(
   <>
-  <Helmet>
-    <title>Fryzman - salon fryzjerski</title>
-    <meta name='author' content='Patryk Zabłocki'/>
-    <link rel="icon" href="/favicon.png" type="image/png" />
-  </Helmet>
-
+  <Helmet />
   <Navbar />
   <Menu />
   {children}
@@ -26,4 +21,3 @@ const Layout = ( { children }) =>(
 )
 
 export default Layout
-
