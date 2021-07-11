@@ -10,10 +10,10 @@ const Navbar = () => (
 
         <div className='navbar'>
             <div className='container navbar-wrapper'>
-                <Link to="/#" className='link'>
+                <Link to="/#" className='link' aria-label="Go to top of the home page">
                     <Logo />
                 </Link>
-                <button className='hamburger-menu' onClick={openMenu}>
+                <button className='hamburger-menu' onClick={openMenu} aria-label="menu">
                     <span className='hamburger-menu__item top-line' />
                     <span className='hamburger-menu__item bottom-line' />
                 </button>

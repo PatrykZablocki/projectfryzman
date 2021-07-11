@@ -28,7 +28,7 @@ const ServicesSection = ()  => (
                         <Link to='/services' className='link'>
                             <PrimaryButton>Zobacz cennik</PrimaryButton>
                         </Link>
-                        <Link to='/#info-section' className='link'>
+                        <Link to='/#info-section' className='link link--scroll-down'>
                             <ScrollDownButton>Informacje</ScrollDownButton>
                         </Link>
                     </div>

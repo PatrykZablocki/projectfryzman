@@ -71,3 +71,11 @@
     }
 
 }
+
+.link--scroll-down:focus-visible {
+    outline: none;
+
+    .arrow-box {
+        outline: -webkit-focus-ring-color auto 1px;
+    }
+}

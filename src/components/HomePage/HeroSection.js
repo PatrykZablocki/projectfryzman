@@ -12,7 +12,7 @@ const HeroSection = ()  => (
         <div className='wrapper'>
             <h1>Fryzman -<span className='blue-font'> Fryzjer męski</span></h1>
             <h3>Strzyżenie męskie i dziecięce</h3>
-            <Link to='/#services-section' className='link'>
+            <Link to='/#services-section' className='link link--scroll-down'>
               <ScrollDownButton>Nasza oferta</ScrollDownButton>
             </Link>
         </div>

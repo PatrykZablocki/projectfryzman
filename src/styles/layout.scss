@@ -64,10 +64,6 @@
             color: $color-blue;
         }
 
-        button:focus {
-            outline: 0;
-        }
-
         &::before {
             content: '';
             background: $color-white;
